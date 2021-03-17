@@ -39,7 +39,7 @@ header{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-content: center;
+    align-items: center;
     /* flex-wrap: wrap-reverse; */
     /* flex-wrap: wrap; */
     /* align-items: center; */
@@ -113,8 +113,8 @@ It should start at a width of  25px  and grow to 420px.
 #logo{
    /*Your code here.*/
    animation-name: logo_grow;
-   animation-duration: 15s;
    animation-iteration-count: 1;
+   animation-duration: 15s;
    /* animation-delay: 15s; */
  
 }
@@ -159,6 +159,7 @@ It should start at a width of  25px  and grow to 420px.
     /* display: flex;
     flex-direction: column; */
     flex-basis: 230px;
+    /* align-items: center; */
   } 
 }
 
