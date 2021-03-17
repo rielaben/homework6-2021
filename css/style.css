@@ -1,0 +1,215 @@
+/*Begin your code here*/
+/*Requirement 1*/
+body{
+  margin: 0;
+  padding: 0;
+  font-size: 16pt; 
+  font-family: "Raleway", sans-serif;
+  background-image: url("../images/concrete_seamless.png");
+}
+
+/*Requirement 2*/
+header{
+  background: #fff;
+  border-bottom: 3px solid #50C7C7;
+  /*Your  code here again.*/
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+/*Requirement 3*/
+.nav_links{
+  /*Your code here again.*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  
+  /* align-items: center; */
+  /* not sure how to make header go on top of this */
+}
+
+/* You should use flex and the cards should be centered both horizontally and vertically.
+ */
+/*Requirement 4*/
+.price{
+    min-height: 500px;
+    /*Your code here*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    /* flex-wrap: wrap-reverse; */
+    /* flex-wrap: wrap; */
+    /* align-items: center; */
+    justify-content: center;
+}
+
+/*Requirement 5*/
+/* Edit the css for the package class to match our example.  
+Achieve this by using a flex-property to specify an initial “size” of 400px.  
+Flex-direction will affect the size of the elements. 
+ You can see that in mobile view they all have the same width. */
+.package {
+  margin: 12px;
+  background: #fff;
+  border-radius: 7px;
+  padding: 0 0 50px 0;
+  /*Your code here.*/
+  /*Take a look at flex-basis*/
+  display: flex;
+  flex-direction: column;
+  flex-basis: 400px;
+  /* display: flex;
+  flex-direction: column; */
+  /* flex-direction: column; */
+}
+
+/*Requirement 6*/
+/* UNCOMMENT THIS CODE ONCE YOU  HAVE THE SELECTOR */
+
+.package header{
+  background: #288080;
+  border: 2px solid #45ADAD;
+  padding: 20px 0;
+  border-radius: 7px 7px 0 0;
+}
+
+
+/*Requirement 7*/
+.gallery{
+  min-height: 600px;
+  /*Your code here again.*/
+  display: flex; 
+  /* flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]; */
+  /* flex-wrap: wrap; */
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+  /* align-items:center; */
+  align-items:bottom;
+  
+
+  /* problems */
+}
+
+/*Requirement 8*/
+/* *  UNCOMMENT THIS CODE ONCE YOU */
+.gallery img{
+  border: 10px #50C7C7 solid;
+  margin: 10px;
+  width: 300px;
+}
+
+/* Animate the logo class with keyframes.   
+It should start at a width of  25px  and grow to 420px. 
+ It should also start with an opacity of 0 and end with an opacity of 1. 
+  The animation should take 15 seconds and not-repeat.    
+  (This will be auto-graded and hand-graded.)
+ */
+/*Requirement 9*/
+#logo{
+   /*Your code here.*/
+   animation-name: logo_grow;
+   animation-duration: 15s;
+   animation-iteration-count: 1;
+   /* animation-delay: 15s; */
+ 
+}
+
+/*Keyframes for animation*/
+@-webkit-keyframes logo_grow{
+  /*Your code here.*/
+  from {width: 25px;}
+  to {width: 420px;}
+
+}
+
+@keyframes logo_grow{
+  /*Your code here.*/
+  from {width: 25px;}
+  to {width: 420px;}
+  /* is this supposed to be same thing? */
+
+} 
+
+@media screen and (min-width: 850px){
+
+  /*Requirement 10*/
+  header{
+    /*Your code here again.*/ 
+    /* display: flex;  */
+    justify-content: space-between;
+    /* flex-wrap: wrap; */
+    flex-direction: row;
+  }
+
+  /*Requirement 10*/
+  .nav_links{
+    /*Your code here again.*/  
+    /* display: flex; */
+    flex-direction: row;
+  }
+
+  /*Requirement 11*/
+  .package {
+    /*Your code here again.*/
+    /* display: flex;
+    flex-direction: column; */
+    flex-basis: 230px;
+  } 
+}
+
+/*Requirement 12*/
+/*Add media query to handle reduced-motion*/
+/*Your code here again.*/ 
+
+@media (prefers-reduced-motion){
+  #logo {
+    animation: none;
+  }
+}
+
+
+@media print { 
+
+  /*Requirement 13*/
+  body{
+    background-image: none;
+  }
+  /*Requirement 14*/
+  nav {
+    width: 100%;
+    /* display: flex; 
+    justify-content: space-between;
+    flex-direction: row; */
+  }
+  /*Requirement 15*/
+  .nav_links{
+    /* elements so that they are spaced according to the image below. */
+    justify-content: space-between;
+  }
+  /*Requirement 16*/
+  .price {
+    display: flex;
+    /* align-self: flex-end; */
+    align-items:bottom;
+    /* align-items: flex-end; */
+    /* align-items: flex-start; */
+  }
+  /*Requirement 17*/
+  .package {
+    flex-basis: 200px;
+    border: 5px solid #45ADAD;
+  }
+  /*Requirement 18*/
+  .gallery {
+    display: none;
+  }
+  #gallery {
+    display: none;
+  }
+}
+
