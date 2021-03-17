@@ -122,15 +122,19 @@ It should start at a width of  25px  and grow to 420px.
 /*Keyframes for animation*/
 @-webkit-keyframes logo_grow{
   /*Your code here.*/
-  from {width: 25px;}
-  to {width: 420px;}
+  from {width: 25px;
+  opacity: 0;}
+  to {width: 420px;
+  opacity: 1;}
 
 }
 
 @keyframes logo_grow{
   /*Your code here.*/
-  from {width: 25px;}
-  to {width: 420px;}
+  from {width: 25px;
+  opacity: 0;}
+  to {width: 420px;
+  opacity: 1;}
   /* is this supposed to be same thing? */
 
 } 
